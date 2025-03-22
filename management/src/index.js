@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client"; // ✅ Use createRoot for React 18
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("root")); // ✅ Correct way
+root.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>,
-  document.getElementById("root")
+  </BrowserRouter>
 );
